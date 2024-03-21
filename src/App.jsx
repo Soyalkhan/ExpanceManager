@@ -109,7 +109,7 @@ function App() {
               <select
                 value={cat}
                 onChange={(e) => setCat(e.target.value)}
-                className="rounded-lg w-full sm:w-3/5 mt-5 text-2xl p-4 border-2 border-red-700"
+                className="rounded-lg w-full sm:w-3/5 mt-5 text-2xl p-4 border-2 border-red-700 text-red-700 font-semibold"
               >
                 <option value="Select Category">Select Category</option>
                 <option value="College Fee">College Fee</option>
@@ -124,13 +124,13 @@ function App() {
               <input
                 onChange={(e) => setDate(e.target.value)}
                 type="date"
-                className=" date-input w-full sm:w-3/5 p-4 text-2xl rounded-lg mt-5 text-black border-2 border-red-700"
+                className=" date-input text-red-700 font-semibold w-full sm:w-3/5 p-4 text-2xl rounded-lg mt-5 text-black border-2 border-red-700"
               />
             </div>
             <div className="submit-expense">
               <button
                 onClick={handleAdd}
-                className="bg-[#FDF0D1] text-red-600 text-2xl p-3 rounded-2xl mt-5 w-full sm:w-3/5 border-2 border-red-700 hover:bg-red-200"
+                className="bg-[#FDF0D1] text-red-700 font-semibold  text-2xl p-3 rounded-2xl mt-5 w-full sm:w-3/5 border-2 border-red-700 hover:bg-red-200"
               >
                 Submit
               </button>
@@ -142,8 +142,11 @@ function App() {
 
         <div className="right">
           <div className="data p-5">
+            <div className="flex flex-col ">
+              <div className="overflow-x-auto sm:-mx-6 lg:-mx-2">
+                <div className="inline-block min-w-full py-2 sm:px-6 lg:px-8">
             <div
-              className="clr bg-red-600 p-2 text-white rounded-lg w-20 ml-6 cursor-pointer"
+              className="clr bg-red-600 p-2 text-white w-20 cursor-pointer justify-center mb-5"
               onClick={() =>{
                 localStorage.clear();
                 setTotal(0)
@@ -152,9 +155,6 @@ function App() {
             >
               clear all
             </div>
-            <div className="flex flex-col ">
-              <div className="overflow-x-auto sm:-mx-6 lg:-mx-2">
-                <div className="inline-block min-w-full py-2 sm:px-6 lg:px-8">
                   <div className="overflow-hidden">
                     <table className="min-w-full text-center text-sm font-light text-surface dark:text-white">
                       <thead className="border-b border-neutral-200 bg-[#FDF0D1] font-medium dark:border-white/10 dark:text-neutral-800">
